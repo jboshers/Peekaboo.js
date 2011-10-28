@@ -1,0 +1,43 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>Peekaboo.js Demo</title>
+	<meta name="description" content="Demo Page for Peekaboo.js">
+	<meta name="author" content="Jeff Boshers">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif+Caption|Satisfy' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<h1>Peekaboo.js</h1>
+<div id="holepunched">
+	<h2>Play Peekaboo!</h2>
+</div>
+<div id="details">
+<h2>Details</h2>
+<p>Peekaboo.js isn't your mother's modal. It allows for content to shine through from the layer it's on, rather than copying it and pasting it inside of another manipulated div. Think of it as your personal javascript hole punch.</p>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="js/peekaboo.js?v1234555321"></script>
+<script type="text/javascript">
+	$('#holepunched').click(function(){
+		$(this).peekaboo({
+			opacity: 0.6,
+			background: '#333',
+			speed: 300,
+			container: 'body'
+		});
+	});
+	$('#details h2').click(function(){
+		$(this).parent().peekaboo({
+			opacity: 0.6,
+			background: '#333',
+			speed: 300,
+			container: 'body'
+		});
+	});
+</script> 
+
+</body>
+</html>
